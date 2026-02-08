@@ -9,7 +9,7 @@
             padding: 0 !important;
             width: 100% !important;
             height: 100% !important;
-            background: url('https://xatimg.com/image/MbGcCOEqZkY6.gif') no-repeat center center fixed !important;
+            background-image: url('https://xatimg.com/image/MbGcCOEqZkY6.gif') no-repeat center center fixed !important;
             background-size: cover !important;
             overflow: hidden !important;
             display: flex;
