@@ -4,17 +4,7 @@
     <meta charset="UTF-8">
     <style>
         /* On force le GIF sur TOUTE la page, sans aucune bordure */
-        body, html {
-            margin: 0 !important;
-            padding: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            background-image: url('https://xatimg.com/image/MbGcCOEqZkY6.gif') no-repeat center center fixed !important;
-            background-size: cover !important;
-            overflow: hidden !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        body, html {     margin: 0; padding: 0; width: 100%; height: 100%;     background: url(’https://xatimg.com/image/MbGcCOEqZkY6.gif’) no-repeat center center/cover;      display: flex; justify-content: center; align-items: center;     overflow: hidden; font-family: ’Trebuchet MS’, sans-serif; }
         }
 
         /* Cette partie est cruciale : elle dit à xat de cacher ses propres textes */
@@ -55,7 +45,7 @@
 </head>
 <body>
     <div class="card">
-        <img src="https://xatimg.com/image/jErnhZ84UiT4.png" class="pfp">
+        <img src="https://xatimg.com/image/jErnhZ84UiT4.png" draggable=”false” class="pfp">
         <div class="name">Hi i'm Tita</div>
         <p class="desc">You can find me on xat.com/Blog, xat.com/Assistance and xat.com/Chat.</p>
         <p class="quote">deen over dunya</p>
