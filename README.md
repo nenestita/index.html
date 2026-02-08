@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <style>
-        /* On force le GIF sur le HTML et le BODY */
-        html, body {
+        /* On force le GIF sur TOUTE la page, sans aucune bordure */
+        body, html {
             margin: 0 !important;
             padding: 0 !important;
-            height: 100vh !important;
-            width: 100vw !important;
-            background-image: url('https://xatimg.com/image/MbGcCOEqZkY6.gif') !important;
-            background-position: center center !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: url('https://xatimg.com/image/MbGcCOEqZkY6.gif') no-repeat center center fixed !important;
             background-size: cover !important;
-            background-repeat: no-repeat !important;
-            background-attachment: fixed !important;
-            background-color: black !important; /* Si le gif bug, au moins c'est noir */
+            overflow: hidden !important;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
         }
 
+        /* Cette partie est cruciale : elle dit à xat de cacher ses propres textes */
+        #xat-header, .header, #xat-footer, .footer, .user-name, .user-id {
+            display: none !important;
+        }
+
+        /* Ton cadre violet style Birdy */
         .card {
             width: 550px;
             height: 350px;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.85); /* Noir semi-transparent */
             border: 2px solid #8a2be2;
             border-radius: 20px;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 0 20px #8a2be2;
-            position: relative;
-            z-index: 10;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+            z-index: 1000;
         }
 
         .pfp { width: 80px; height: 80px; border-radius: 50%; border: 2px solid #8a2be2; margin-top: 10px; }
@@ -48,17 +49,16 @@
             display: flex;
             justify-content: space-around;
         }
-        .icons img { width: 30px; height: 30px; }
+        .icons img { width: 30px; height: 30px; transition: 0.3s; }
+        .icons img:hover { transform: scale(1.2); }
     </style>
 </head>
 <body>
-
     <div class="card">
         <img src="https://xatimg.com/image/jErnhZ84UiT4.png" class="pfp">
         <div class="name">Hi i'm Tita</div>
         <p class="desc">You can find me on xat.com/Blog, xat.com/Assistance and xat.com/Chat.</p>
         <p class="quote">deen over dunya</p>
-        
         <div class="icons">
             <a href="https://forum.xat.com/profile/55475/" target="_blank"><img src="https://xatimg.com/image/88aRECutI7NF.png"></a>
             <a href="https://www.youtube.com/watch?v=25MmCEpftKo" target="_blank"><img src="https://xatimg.com/image/vrKvF4ppWX7k.png"></a>
@@ -66,6 +66,5 @@
             <a href="https://xat.com/blog" target="_blank"><img src="https://xatimg.com/image/NycXn0QvBMnh.png"></a>
         </div>
     </div>
-
 </body>
 </html>
